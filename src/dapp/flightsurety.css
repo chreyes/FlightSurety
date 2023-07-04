@@ -1,11 +1,11 @@
 body {
-    background-image: url('flight.jpg'); /* Source: iStockPhoto */
+    background-image: url('flight.jpg');  /*Source: iStockPhoto*/
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .container {
-    margin-top: 400px;
+    margin-top: 100px;
     background-color: #000;
     opacity: 0.9;
     color: #fff;
@@ -39,4 +39,8 @@ label.form {
 }
 input {
     margin-right: 30px;
+}
+.card {
+    /* width: 18rem; */
+    background-color: #131313;
 }

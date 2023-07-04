@@ -7,7 +7,7 @@ contract('Flight Surety Tests', async (accounts) => {
   var config;
   before('setup contract', async () => {
     config = await Test.Config(accounts);
-    await config.flightSuretyData.authorizeCaller(config.flightSuretyApp.address);
+    await config.flightSuretyData.authorizeContract(config.flightSuretyApp.address);
   });
 
   /****************************************************************************************/
@@ -78,17 +78,48 @@ contract('Flight Surety Tests', async (accounts) => {
 
     // ACT
     try {
+        console.log('here1');
         await config.flightSuretyApp.registerAirline(newAirline, {from: config.firstAirline});
+        console.log('here2');
     }
     catch(e) {
 
     }
     let result = await config.flightSuretyData.isAirline.call(newAirline); 
-
+    // let countAirlines = await config.flightSuretyData.getAirlinesCount.call(); 
+    // console.log(countAirlines);
     // ASSERT
     assert.equal(result, false, "Airline should not be able to register another airline if it hasn't provided funding");
 
   });
+
+//   // 1st Test
+//   it("(airline) register an Airline using registerAirline()", async () => {
+//     // ARRANGE
+//     let newAirline = accounts[2];
+
+//     try {
+//         console.log('here1');
+//         await config.flightSuretyApp.registerAirline(newAirline, {from: config.firstAirline});
+//         console.log('here2');
+//     }
+//     catch(e) {
+
+//     }
+
+//     // await config.flightSuretyApp.registerAirline(newAirline, {from: config.firstAirline});
+
+//     // Declare and Initialize a variable for event
+//     var eventEmitted = false
+
+//     // Watch the emitted event Harvested()
+//     var event = config.flightSuretyData.Registered()
+//     await event.watch((err, res) => {
+//         eventEmitted = true
+//     })
+
+//     assert.equal(eventEmitted, true, 'Invalid event emitted')
+// })
  
 
 });

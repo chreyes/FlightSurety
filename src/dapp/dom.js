@@ -16,12 +16,22 @@ export default class DOM {
     static span = (...args) => DOM.makeElement(`span`, ...args);
     static img = (...args) => DOM.makeElement(`img`, ...args);
     static td = (...args) => DOM.makeElement(`td`, ...args);
+    static tr = (...args) => DOM.makeElement(`tr`, ...args);
+    static input = (...args) => DOM.makeElement(`input`, ...args);
+    static btn = (...args) => DOM.makeElement(`btn`, ...args);
+    static label = (...args) => DOM.makeElement(`label`, ...args);
+    static li = (...args) => DOM.makeElement(`li`, ...args);
+    static option = (...args) => DOM.makeElement(`option`, ...args);
     static attributeExceptions = [
       `role`,
     ];
     
     static elid(id) { 
       return document.getElementById(id);
+    }
+
+    static elclass(cl) { 
+      return document.getElementsByClassName(cl);
     }
   
     static appendText(el, text) {

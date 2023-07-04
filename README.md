@@ -11,12 +11,15 @@ To install, download or clone the repo, then:
 `npm install`
 `truffle compile`
 
+versions of node with nvm in separate terminals: 
+
+migrate contracts (node -> v19.2.0)
+server (node -> v14.16.1)
+dapp (node -> v8.17.0)
+
 ## Develop Client
 
-To run truffle tests:
-
-`truffle test ./test/flightSurety.js`
-`truffle test ./test/oracles.js`
+Tests run in Dapp
 
 To use the dapp:
 
@@ -30,14 +33,6 @@ To view dapp:
 ## Develop Server
 
 `npm run server`
-`truffle test ./test/oracles.js`
-
-## Deploy
-
-To build dapp for prod:
-`npm run dapp:prod`
-
-Deploy the contents of the ./dapp folder
 
 
 ## Resources
