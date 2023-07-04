@@ -15,10 +15,10 @@ To install, download or clone the repo, then:
 
 versions of node with nvm in separate terminals: 
 
-truffle console (node -> v19.2.0)
-migrate contracts (node -> v19.2.0)
-server (node -> v14.16.1)
-dapp (node -> v8.17.0)
+* truffle console (node -> v19.2.0)
+* migrate contracts (node -> v19.2.0)
+* server (node -> v14.16.1)
+* dapp (node -> v8.17.0)
 
 I run this in 4 separate iterm panels
 
